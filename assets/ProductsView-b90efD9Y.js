@@ -1,0 +1,1 @@
+import{_ as o,a as t,b as n,F as r,e as s,o as c,r as a}from"./index-BpX9nGON.js";const _={},l=s("h2",null,"後台產品列表",-1);function u(d,i){const e=a("RouterView");return c(),t(r,null,[l,n(e)],64)}const f=o(_,[["render",u]]);export{f as default};

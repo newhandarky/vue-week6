@@ -1,10 +1,24 @@
 <template>
-  <h2>這是後台</h2>
-  <nav>
-    <RouterLink to="/admin/products">產品列表</RouterLink> |
-    <RouterLink to="/admin/order">訂單列表</RouterLink> |
-    <RouterLink to="/">前台頁面</RouterLink>
-  </nav>
+  <div class="nav mb-4 py-2 bg-dark">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end">
+        <RouterLink to="/">
+          <h1>
+            <a class="navbar-brand logo m-0 p-0" role="button">CoffeeMeetsBagel</a>
+          </h1>
+        </RouterLink>
+        <div>
+          <RouterLink class="text-decoration-none nav-links" to="/admin/order">後台訂單頁</RouterLink>
+          <span class="text-white mx-2"> | </span>
+          <RouterLink class="text-decoration-none nav-links" to="/admin/products">後台產品頁</RouterLink>
+          <span class="text-white mx-2"> | </span>
+          <RouterLink class="text-decoration-none nav-links" to="/">返回前台</RouterLink>
+          <span class="text-white mx-2"> | </span>
+          <a href="#" class="text-decoration-none nav-links" @click="checkout">登出</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <RouterView></RouterView>
 </template>
 
@@ -22,12 +36,18 @@ export default {
   },
   methods: {
     checkUser () {
-      const api = `${VITE_URL}/api/user/check`
-      axios.post(api).then(() => {
-        // console.log('驗證成功', res.data);  因系統警告改備註
+      axios.post(`${VITE_URL}/api/user/check`).then(() => {
+        console.log('狀態已登入')
       }).catch(() => {
-        // alert('登入驗證失敗, 將返回登入頁面');  因系統警告改備註
+        alert('請先登入')
         this.$router.push('/login')
+      })
+    },
+    checkout () {
+      axios.post(`${VITE_URL}/logout`).then((res) => {
+        console.log(res)
+        document.cookie = 'hexschoolToken=\'\'; expires=\'\'; path=/'
+        alert('已登出')
       })
     }
   },
@@ -44,3 +64,25 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.logo {
+  display: block;
+  width: 256px;
+  height: 64px;
+  background-image: url('../../public/coffee_meets_bagel_Logo_Footer.svg'); // 借用專題LOGO
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-links{
+  color: white;
+  transition: color 1s;
+}
+.nav-links:hover{
+  color: #E2725E;
+  transition: color 1s;
+}
+</style>

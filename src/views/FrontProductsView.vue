@@ -1,10 +1,4 @@
 <template>
-  <h2>產品列表</h2>
-  <RouterLink to="/">Home</RouterLink> |
-  <RouterLink to="/about">About</RouterLink> |
-  <RouterLink to="/productsList">前台產品頁</RouterLink> |
-  <RouterLink to="/admin">後台產品頁</RouterLink>
-  <router-view></router-view>
   <div class="container">
     <div class="row py-3">
       <div class="col-md-6">

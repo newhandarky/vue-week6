@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as c,a as s}from"./index-VHrA6eaq.js";const t={},n={class:"my-4 container"},_=s("h2",null,"歡迎來到後台",-1),a=[_];function r(i,d){return c(),o("div",n,a)}const m=e(t,[["render",r]]);export{m as default};

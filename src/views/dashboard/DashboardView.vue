@@ -70,7 +70,7 @@ export default {
   display: block;
   width: 256px;
   height: 64px;
-  background-image: url('../../public/coffee_meets_bagel_Logo_Footer.svg'); // 借用專題LOGO
+  background-image: url('https://raw.githubusercontent.com/newhandarky/vue-week6/4a8aa1fdceff4f3b197cc0bfcb2293c8a17c9733/public/coffee_meets_bagel_Logo_Footer.svg'); // 借用專題LOGO
   background-repeat: no-repeat;
   text-indent: 101%;
   overflow: hidden;

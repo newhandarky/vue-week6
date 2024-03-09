@@ -2,7 +2,7 @@
   <div class="nav mb-4 py-2 bg-dark">
     <div class="container">
       <div class="d-flex justify-content-between align-items-end">
-        <RouterLink to="/">
+        <RouterLink to="/admin">
           <h1>
             <a class="navbar-brand logo m-0 p-0" role="button">CoffeeMeetsBagel</a>
           </h1>

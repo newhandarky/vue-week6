@@ -8,10 +8,8 @@
           </h1>
         </RouterLink>
         <div>
-          <RouterLink class="text-decoration-none nav-links" to="/createOrder">產品選購頁</RouterLink>
+          <RouterLink class="text-decoration-none nav-links" to="/createOrder">來去點餐</RouterLink>
           <span class="text-white mx-2"> | </span>
-          <!-- <RouterLink class="text-decoration-none nav-links" to="/productsList">前台產品頁</RouterLink>
-          <span class="text-white mx-2"> | </span> -->
           <RouterLink class="text-decoration-none nav-links" to="/admin">後台頁面</RouterLink>
         </div>
       </div>
@@ -27,8 +25,7 @@
           </RouterLink>
         </div>
         <div class="d-flex flex-column text-end">
-          <RouterLink class="text-decoration-none nav-links mb-2" to="/createOrder">產品選購頁</RouterLink>
-          <!-- <RouterLink class="text-decoration-none nav-links mb-2" to="/productsList">前台產品頁</RouterLink> -->
+          <RouterLink class="text-decoration-none nav-links mb-2" to="/createOrder">來去點餐</RouterLink>
           <RouterLink class="text-decoration-none nav-links" to="/admin">後台頁面</RouterLink>
         </div>
       </div>
@@ -37,12 +34,14 @@
 </template>
 
 <style scoped lang="scss">
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
+
 .wrapper {
-  min-height: calc(100vh - 296px); /*減去footer高度*/
+  min-height: calc(100vh - 272px); /*減去header, footer高度*/
 }
 .logo {
   display: block;
@@ -55,15 +54,17 @@ html, body {
   white-space: nowrap;
 }
 
-.nav-links{
+.nav-links {
   color: white;
   transition: color 1s;
 }
-.nav-links:hover{
+
+.nav-links:hover {
   color: #E2725E;
   transition: color 1s;
 }
-.footer{
+
+.footer {
   background: #000;
 }
 </style>

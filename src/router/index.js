@@ -39,14 +39,29 @@ const routes = [
         component: () => import('../views/dashboard/AdminHomeView.vue')
       },
       {
-        path: 'order',
-        name: 'Order',
-        component: () => import('../views/dashboard/OrderView.vue')
+        path: 'orders',
+        name: 'orders',
+        component: () => import('../views/dashboard/AdminOrderView.vue')
+      },
+      {
+        path: 'orders/:id',
+        name: 'ordersById',
+        component: () => import('../views/dashboard/AdminDynamicOrderView.vue')
       },
       {
         path: 'products',
         name: 'Products',
-        component: () => import('../views/dashboard/ProductsView.vue')
+        component: () => import('../views/dashboard/AdminProductsView.vue')
+      },
+      {
+        path: 'products/:id',
+        name: 'productsById',
+        component: () => import('../views/dashboard/DynamicProductView.vue')
+      },
+      {
+        path: 'addProduct',
+        name: 'addProduct',
+        component: () => import('../views/dashboard/DynamicProductView.vue')
       }
     ]
   }

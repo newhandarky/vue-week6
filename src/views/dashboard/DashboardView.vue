@@ -8,7 +8,7 @@
           </h1>
         </RouterLink>
         <div>
-          <RouterLink class="text-decoration-none nav-links" to="/admin/order">後台訂單頁</RouterLink>
+          <RouterLink class="text-decoration-none nav-links" to="/admin/orders">後台訂單頁</RouterLink>
           <span class="text-white mx-2"> | </span>
           <RouterLink class="text-decoration-none nav-links" to="/admin/products">後台產品頁</RouterLink>
           <span class="text-white mx-2"> | </span>
